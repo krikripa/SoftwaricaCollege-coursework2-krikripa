@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
 
     CREATE TABLE Customer (
     CustomerID SERIAL PRIMARY KEY,
@@ -18,6 +11,19 @@
     DateofBirth DATE
 );
 
+CREATE TABLE Staff (
+    StaffID SERIAL PRIMARY KEY,
+    StaffName VARCHAR(50) NOT NULL,
+    Role VARCHAR(50)
+);
+
+CREATE TABLE Machine (
+    MachineID INT PRIMARY KEY AUTO_INCREMENT,
+    Game VARCHAR(50),
+    Year INT,
+    Floor INT
+);
+
 CREATE TABLE Session (
     SessionID INT PRIMARY KEY AUTO_INCREMENT,
     SessionDay VARCHAR(20),
@@ -28,6 +34,15 @@ CREATE TABLE Session (
     Price DECIMAL(10, 2)
 );
 
+CREATE TABLE Booking (
+    BookingID SERIAL PRIMARY KEY,
+    CustomerID INT REFERENCES Customer(CustomerID),
+    SessionID INT REFERENCES Session(SessionID),
+    BookingDate TIMESTAMP,
+    Fee DECIMAL(10, 2),
+    Prepaid BOOLEAN
+);
+
 CREATE TABLE Consoles (
     ConsoleID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(50),
@@ -36,6 +51,13 @@ CREATE TABLE Consoles (
     Quantity INT
 );
 
+CREATE TABLE SessionConsole (
+    SessionID INT REFERENCES Session(SessionID),
+    consoleDate DATE,
+    Quantity INT,
+    ConsoleID INT REFERENCES Console(ConsoleID),
+    PRIMARY KEY (SessionID, ConsoleID)
+);
+
+
     
-</body>
-</html>
