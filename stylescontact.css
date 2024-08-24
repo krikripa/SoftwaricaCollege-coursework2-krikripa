@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+header h1, nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.contact-container {
+    background: url('dark.jpg') no-repeat center center/cover;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+.contact-container h2, .contact-container p {
+    text-shadow: 2px 2px 4px black; /* Highlight with white shadow */
+    font-weight: bold; /* Bold text */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+}

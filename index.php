@@ -1,0 +1,56 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Photography Studio</title>
+    <link rel="stylesheet" href="stylesindex.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Dream Studio</div>
+        <nav>
+            <ul>
+                <li><a href="index.php" class="home">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <?php if (isset($_SESSION['username'])): ?>
+                    <li class="user-dropdown">
+                        <a href="#" class="user-icon"><?php echo strtoupper(substr($_SESSION['username'], 0, 2)); ?></a>
+                        <div class="dropdown-content">
+                            <a href="#">Stay Signed In</a> <br>
+                            <a href="logout.php">Sign Out</a>
+                        </div>
+                    </li>
+                <?php else: ?>
+                    <li><a href="login.html">Login</a></li> <!-- Updated to redirect to the login page -->
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1>Capture Your Precious Moments</h1>
+            <p>Professional photography services for weddings, portraits, events, and more.</p>
+            <a href="portfolio.html" class="button">View Portfolio</a>
+            <a href="booking.html" class="button">Book a Session</a>
+        </div>
+        <div class="image">
+            <img src="baby.jpg" alt="Photography Studio">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dream Photography Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

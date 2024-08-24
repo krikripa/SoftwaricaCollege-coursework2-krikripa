@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.message-container {
+    background: white;
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+}
+
+.message-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.message-container p {
+    margin: 15px 0;
+}
+
+.message-container a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.message-container a:hover {
+    text-decoration: underline;
+}
+
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #dc3545;
+}

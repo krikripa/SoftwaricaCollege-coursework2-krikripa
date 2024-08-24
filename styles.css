@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 50px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header .logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff6347;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    background-color: rgba(255, 99, 71, 0.3);
+}
+
+/* Portfolio Page Specific Styles */
+.portfolio-page .portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 150px 50px 50px 50px; /* Added padding at the top to create space */
+}
+
+.portfolio-page .portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-page .portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.portfolio-page .portfolio-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}

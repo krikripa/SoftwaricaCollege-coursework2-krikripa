@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #333; /* Dark background */
+    color: #f9f9f9; /* Light text color */
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    padding: 20px;
+    background: #444; /* Slightly lighter dark shade for the header */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; /* Rounded corners */
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+nav {
+    margin-bottom: 15px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffcc00; /* Bright, contrasting color */
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #ff9900; /* Slightly darker shade for the active link */
+    text-decoration: underline;
+}
+
+header p {
+    color: #ccc; /* Softer white for the subtitle */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    background: #555; /* Dark background for items */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    color: #f9f9f9; /* Ensure text in the gallery items is readable */
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    background: #ffcc00;
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #e6b800;
+}

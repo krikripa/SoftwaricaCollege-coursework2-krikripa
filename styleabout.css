@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 10px;
+    background: #000;
+    border-bottom: 2px solid #444; /* Line separating the header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation */
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav a.active, 
+nav a:hover {
+    background: #444; /* Highlighting active and hovered links */
+    padding: 8px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.text-section h2 {
+    font-size: 36px;
+    color: #ffcc00;
+}
+
+.text-section p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Crisscross Image Layout */
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    transform: rotate(-45deg);
+    margin-top: 30px;
+}
+
+.image-section img {
+    width: 250px;
+    height: 250px;
+    transform: rotate(45deg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    margin-top: auto;
+}
